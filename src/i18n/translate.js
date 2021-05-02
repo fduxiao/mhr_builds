@@ -19,5 +19,12 @@ export default {
         zh_CN: "当前语言：",
         default: 'en_US',
     },
-    
+    quickBuild: {
+        en_US: "Quick Build",
+        zh_CN: "快速配装",
+    },
+    buildList: {
+        en_US: "Build List",
+        zh_CN: "配装列表",
+    }
 }

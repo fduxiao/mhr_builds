@@ -5,8 +5,8 @@
         <div>{{ $i18n.$lang }}</div>
         <div>
             <span>{{ $i18n.selectLanguage }}</span>
-            <button type="button" @click="$setLang('zh_CN')">中文</button>
-            <button type="button" @click="$setLang('en_US')">English</button>
+            <el-button plain @click="$setLang('zh_CN')">中文</el-button>
+            <el-button plain @click="$setLang('en_US')">English</el-button>
         </div>
         <div>
             <span v-if="$i18n.$lang == 'en_US'">English Content</span>

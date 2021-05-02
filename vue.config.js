@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/mhr_builds'
+    publicPath: '/mhr_builds'
 }
