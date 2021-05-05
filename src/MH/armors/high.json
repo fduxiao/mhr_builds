@@ -1,0 +1,50 @@
+{
+    "KamuraS": {
+        "rank": "high",
+        "name": {
+            "zh_CN": "炎火装束·霸",
+            "en_US": "Kamura S"
+        },
+        "head": {
+            "name": {
+                "en_US": "Kamura Head Scarf S",
+                "zh_CN": "炎火装束【头巾】霸"
+            },
+            "skills": [
+                ["mastery", 1]
+            ],
+            "materials": [
+                ["fireDragonScalePlus", 2]
+            ],
+            "slots": [1],
+            "description": {
+                "en_US": "Signature Kamura headwear. All village defenders sport this dark blue attire.",
+                "zh_CN": "炎火村的头部防具。戴上这条绀青色头巾即是成为守护村庄者的第一步。"
+            }
+        }
+    },
+    "LeatherS": {
+        "rank": "high",
+        "name": {
+            "zh_CN": "皮具S套装",
+            "en_US": "Leather S"
+        },
+        "head": {
+            "name": {
+                "en_US": "Leather Headgear S",
+                "zh_CN": "皮具头套S"
+            },
+            "skills": [
+                ["mastery", 1]
+            ],
+            "materials": [
+                ["fireDragonScalePlus", 2]
+            ],
+            "slots": [1],
+            "description": {
+                "en_US": "Chest armor made from leather and other light, easily obtainable materials",
+                "zh_CN": "皮具头"
+            }
+        }
+    }
+}

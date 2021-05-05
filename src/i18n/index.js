@@ -4,6 +4,9 @@ export default {
             computed: {
                 $i18n() {
                     return this.$store.state.i18n.getTrans()
+                },
+                $lang() {
+                    return this.$i18n.$lang
                 }
             },
             methods: {

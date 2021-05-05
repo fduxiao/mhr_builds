@@ -12,14 +12,6 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
-Vue.mixin({
-    computed: {
-        $i18n() {
-            return this.$store.state.i18n.getTrans()
-        }
-    },
-})
-
 new Vue({
     router,
     store,

@@ -1,0 +1,28 @@
+{
+    "Rathalos": {
+        "name": {
+            "en_US": "Rathalos",
+            "zh_CN": "火龙"
+        }
+
+    },
+    "Teostra": {
+        "name": {
+            "en_US": "Teostra",
+            "zh_CN": "炎王龙"
+        },
+        "hunting": {
+            "en_US": "The black scale dust a Teostra scatters whill spread over a wide area until it finally explodes;...",
+            "zh_CN": ""
+        },
+        "physiology": {
+            "head":    [50,55,45,0,20,10,15,10],
+            "neck":    [],
+            "foreleg": []
+
+        },
+        "aliment": {
+            "poison": [1,2,2,1,2,2]
+        }
+    }
+}

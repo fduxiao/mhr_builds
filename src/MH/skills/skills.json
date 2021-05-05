@@ -1,0 +1,37 @@
+{
+    "mastery": {
+        "name": {
+            "en_US": "Master's Touch",
+            "zh_CN": "达人艺"
+        },
+        "description": {
+            "en_US": "Prevents your weapon from losing sharpness during critical hits",
+            "zh_CN": "会心攻击时一定概率不减少锋利度"
+        },
+        "levels": [
+            {
+                "en_US": "Grants a 20% chance of no sharpness loss while active",
+                "zh_CN": "发动时20%的概率不下降锋利度"
+            },
+            {
+                "en_US": "Grants a 40% chance of no sharpness loss while active",
+                "zh_CN": "发动时40%的概率不下降锋利度"
+            },
+            {
+                "en_US": "Grants a 80% chance of no sharpness loss while active",
+                "zh_CN": "发动时80%的概率不下降锋利度"
+            }
+        ],
+        "decoration": {
+            "name": {
+                "en_US": "Mastery Jewel",
+                "zh_CN": "达艺珠"
+            },
+            "level": 2,
+            "materials": [
+                ["lazuriteJewel", 8],
+                ["fireDragonScalePlus", 6]
+            ]
+        }
+    }
+}
