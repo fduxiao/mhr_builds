@@ -28,6 +28,7 @@
                 "zh_CN": "达艺珠"
             },
             "level": 2,
+            "zenny": 4000,
             "materials": [
                 ["lazuriteJewel", 8],
                 ["fireDragonScalePlus", 6]

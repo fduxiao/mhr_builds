@@ -1,0 +1,39 @@
+
+{
+    "lazuriteJewel": {
+        "name": {
+            "zh_CN": "琉璃原珠",
+            "en_US": "Lazurite Jewel"
+        },
+        "description": {
+            "zh_CN": "琉璃原珠",
+            "en_US": "Lazurite Jewel"
+        }, 
+        "sources": [
+            {
+                "type": "other", 
+                "content": {
+                    "en_US": "From task",
+                    "zh_CN": "工会七星任务有概率获取"
+                }
+            }
+        ]
+    },
+    "fireDragonScalePlus": {
+        "name": {
+            "en_US": "Fire Dragon Scale+",
+            "zh_CN": "炎之龙鳞"
+        },
+        "description": {
+            "zh_CN": "炎之龙鳞",
+            "en_US": "Fire Dragon Scale+"
+        }, 
+        "sources": [
+            {
+                "type": "monster",
+                "rank": "high",
+                "target": "Teostra"
+            }
+        ]
+    }
+}

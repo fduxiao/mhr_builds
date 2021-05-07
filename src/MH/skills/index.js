@@ -1,12 +1,12 @@
 import skills from './skills.json'
 
 
-class Skills {
+export class Skill {
     constructor(data) {
         this.data = data
     }
 
-    load(lang) {
+    setLang(lang) {
         // deep copy
         var skill = JSON.parse(JSON.stringify(this.data))
         skill.name = skill.name[lang]
@@ -21,15 +21,18 @@ class Skills {
     }
 }
 
-function addLoad(obj) {
+function loadJSON(obj) {
     let result = {}
     for(let key in obj) {
-        result[key] = new Skills(obj[key])
+        result[key] = new Skill(obj[key])
     }
     return result
 }
 
 
 export default {
-    ...addLoad(skills)
+    skills: {
+        ...loadJSON(skills)
+    },
+    Skill
 }

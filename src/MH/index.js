@@ -1,14 +1,14 @@
 import materials from './materials'
 import armors from './armors'
-import monsters from './monsters.json'
+import monsters from './monsters'
 import skills from './skills'
 import weapons from './weapons.json'
 
 export default {
-    materials,
-    armors,
-    monsters,
-    skills,
+    ...materials,
+    ...armors,
+    ...monsters,
+    ...skills,
     weapons,
     install: function(Vue) {
         Vue.mixin({
@@ -25,6 +25,9 @@ export default {
                         case 'high':
                             return this.$i18n.highRank
                     }
+                },
+                $getMonster(key) {
+                    return this.$MH.monsters[key]
                 }
             }
         })

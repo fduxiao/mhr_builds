@@ -90,5 +90,13 @@ export default {
     decoration: {
         en_US: "Decoration",
         zh_CN: "装饰品"
+    },
+    description: {
+        en_US: "Description",
+        zh_CN: "描述"
+    },
+    skillLevels: {
+        en_US: "Skill Levels",
+        zh_CN: "技能等级"
     }
 }

@@ -6,7 +6,7 @@ class Armor {
         this.data = data
     }
 
-    load(lang) {
+    setLang(lang) {
         // deep copy
         var armor = JSON.parse(JSON.stringify(this.data))
         armor.name = armor.name[lang]
@@ -22,7 +22,7 @@ class Armor {
     }
 }
 
-function addLoad(obj) {
+function loadJSON(obj) {
     let result = {}
     for(let key in obj) {
         result[key] = new Armor(obj[key])
@@ -32,5 +32,8 @@ function addLoad(obj) {
 
 
 export default {
-    ...addLoad(high)
+    armors: {
+        ...loadJSON(high)
+    },
+    Armor
 }

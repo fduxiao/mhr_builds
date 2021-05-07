@@ -1,22 +1,39 @@
+import materials from './materials.json'
+
+
+ class Material {
+    constructor(data) {
+        this.data = data
+    }
+
+    setLang(lang) {
+        // deep copy
+        var material = JSON.parse(JSON.stringify(this.data))
+        material.name = material.name[lang]
+        material.description = material.description[lang]
+
+        // i18n support
+        for(let i in material.sources) {
+            if(material.sources[i].type === "other") {
+                material.sources[i].content = material.sources[i].content[lang]
+            }
+        }
+        return material
+    }
+}
+
+function loadJSON(obj) {
+    let result = {}
+    for(let key in obj) {
+        result[key] = new Material(obj[key])
+    }
+    return result
+}
+
 
 export default {
-    lazuriteJewel: {
-        name: {
-            zh_CN: "琉璃原珠",
-            en_US: "Lazurite Jewel"
-        },
-        sources: [
-            {
-                en_US: "From task",
-                zh_CN: "工会七星任务有概率获取"
-            }
-        ]
+    materials: {
+        ...loadJSON(materials)
     },
-    fireDragonScalePlus: {
-        name: {
-            en_US: "Fire Dragon Scale+",
-            zh_CN: "炎之龙鳞"
-        },
-        sources: []
-    }
+    Material
 }

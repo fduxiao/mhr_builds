@@ -13,7 +13,7 @@
         },
         "hunting": {
             "en_US": "The black scale dust a Teostra scatters whill spread over a wide area until it finally explodes;...",
-            "zh_CN": ""
+            "zh_CN": "炎王龙"
         },
         "physiology": {
             "head":    [50,55,45,0,20,10,15,10],
@@ -23,6 +23,14 @@
         },
         "aliment": {
             "poison": [1,2,2,1,2,2]
+        },
+        "materials": {
+            "low": null,
+            "high": {
+                "fireDragonScalePlus": {
+                    "capture": 19
+                }
+            }
         }
     }
 }
