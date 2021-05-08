@@ -2,7 +2,7 @@
     <popover :dependent="skillPopover" placement="left">
         <el-row>
             <popover :debug="true" v-if="skill.decoration" v-model="skillPopover" :dependent="decorationPopover" placement="left">
-                <Decoration @input="a($event)" :decoration="skill.decoration"/>
+                <Decoration @input="decorationPopover = $event" :decoration="skill.decoration"/>
                 <el-link type="primary" slot="reference">
                     {{skill.name}}<Diamond :n="skill.decoration.level"></Diamond>
                 </el-link>
@@ -12,11 +12,8 @@
         <el-row>
         {{skill.description}}
         </el-row>
-        <el-row v-for="level of skill.levels" :key="level.value">
-            <el-divider></el-divider>
-            <el-col :span="12" style="word-break: break-word;">{{level.description}}</el-col>
-            <el-col :span="12" style="text-align: center">{{level.value}}</el-col>
-        </el-row>
+        <el-divider></el-divider>
+        <SkillLevels :levels="skill.levels"></SkillLevels>
         <el-row slot="reference">
             <el-col :span="20">
                 <el-link type="primary" >
@@ -31,17 +28,14 @@
 <script>
 import Diamond from "./Diamond"
 import Decoration from "./Decoration"
+import SkillLevels from './SkillLevels'
 
 export default {
     name: "SkillPopover",
-    methods: {
-        a(val) {
-            this.decorationPopover = val
-        }
-    },
     components: {
         Diamond,
-        Decoration
+        Decoration,
+        SkillLevels
     },
     data() {
         return {

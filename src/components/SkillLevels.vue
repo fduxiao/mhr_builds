@@ -1,8 +1,11 @@
 <template>
-    <el-table :show-header="false" :data="realLevels">
-        <el-table-column prop="name"></el-table-column>
-        <el-table-column prop="value"></el-table-column>
-    </el-table>
+    <div>
+        <el-row v-for="level of realLevels" :key="level.value">
+            <el-divider v-if="level.value != 1"></el-divider>
+            <el-col :span="12" style="word-break: break-word;">{{level.description}}</el-col>
+            <el-col :span="12" style="text-align: center">{{level.value}}</el-col>
+        </el-row>
+    </div>
 </template>
 <script>
 export default {
@@ -13,12 +16,12 @@ export default {
         realLevels(){
             let levels = []
             for(let i = 0; i < this.levels.length; i++) {
-                let name = this.levels[i]
-                if(!name instanceof String) {
-                    name = name[this.$lang]
+                let description = this.levels[i]
+                if(description instanceof Object) {
+                    description = description[this.$lang]
                 }
                 levels.push({
-                    name: name,
+                    description: description,
                     value: i+1
                 })
             }

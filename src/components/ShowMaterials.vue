@@ -1,7 +1,7 @@
 <template>
     <div>
-        <el-row v-for="material in realMaterials" :key="material.id">
-            <el-divider></el-divider>
+        <el-row v-for="(material, index) in realMaterials" :key="material.id">
+            <el-divider v-if="index != 0"></el-divider>
             <el-col :span="12" style="word-break: break-word;">
                 <popover @input="input(material, $event)" placement="left">
                     <el-row v-for="source in material.sources" :key="source.type+source.content+source.target">

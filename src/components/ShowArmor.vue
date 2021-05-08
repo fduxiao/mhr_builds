@@ -3,6 +3,7 @@
         <el-row>
             <popover :dependent="materialsPopover" placement="left">
                 <p>{{ armor.description }}</p>
+                <el-divider></el-divider>
                 <ShowMaterials v-model="materialsPopover" :materials="armor.materials"/>
                 <div slot="reference">
                     <el-link type="primary">{{ armor.name }}</el-link>

@@ -30,14 +30,6 @@ export default {
                 let skill = this.$MH.skills[id].setLang(this.$lang)
                 skill.id = id
                 skill.level = level
-                let levels = []
-                for(let i = 0; i < skill.levels.length; i++) {
-                    levels.push({
-                        description: skill.levels[i],
-                        value: i+1
-                    })
-                }
-                skill.levels = levels
                 result.push(skill)
             }
             return result
