@@ -1,22 +1,23 @@
 <template>
-    <el-table :show-header="false" :data="realMaterials" style="width:100%">
-        <el-table-column prop="name">
-            <template slot-scope="scope">
-                <popover @input="input(scope.row.id, $event)" placement="left">
-                    <el-row v-for="source in scope.row.sources" :key="source.type+source.content+source.target">
+    <div>
+        <el-row v-for="material in realMaterials" :key="material.id">
+            <el-divider></el-divider>
+            <el-col :span="12" style="word-break: break-word;">
+                <popover @input="input(material, $event)" placement="left">
+                    <el-row v-for="source in material.sources" :key="source.type+source.content+source.target">
                         <div v-if="source.type === 'other'">{{source.content}}</div>
                         <div v-if="source.type === 'monster'" :set="monster=$getMonster(source.target).setLang($lang)">
                             <div>{{monster.name}}</div>
                         </div>
                     </el-row>
                     <div slot="reference">
-                        <el-link type="primary">{{ scope.row.name }}</el-link>
+                        <el-link type="primary">{{ material.name }}</el-link>
                     </div>
                 </popover>
-            </template>
-        </el-table-column>
-        <el-table-column prop="number"></el-table-column>
-    </el-table>
+            </el-col>
+            <el-col :span="12" style="text-align: center"> {{ material.number }}</el-col>
+        </el-row>
+    </div>
 </template>
 <script>
 export default {

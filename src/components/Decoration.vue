@@ -1,7 +1,6 @@
 <template>
     <div>
         <el-row><b>{{decoration.name}}</b><Diamond :n="decoration.level"/></el-row>
-        <el-divider></el-divider>
         <ShowMaterials :value="value" @input="$emit('input', $event)" :materials="decoration.materials"></ShowMaterials>
     </div>
 </template>

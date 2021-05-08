@@ -12,11 +12,11 @@
         <el-row>
         {{skill.description}}
         </el-row>
-        <el-divider></el-divider>
-        <el-table :show-header="false" :data="skill.levels" style="width:100%">
-            <el-table-column prop="name"></el-table-column>
-            <el-table-column prop="value"></el-table-column>
-        </el-table>
+        <el-row v-for="level of skill.levels" :key="level.value">
+            <el-divider></el-divider>
+            <el-col :span="12" style="word-break: break-word;">{{level.description}}</el-col>
+            <el-col :span="12" style="text-align: center">{{level.value}}</el-col>
+        </el-row>
         <el-row slot="reference">
             <el-col :span="20">
                 <el-link type="primary" >

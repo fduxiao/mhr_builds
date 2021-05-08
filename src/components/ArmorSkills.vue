@@ -33,7 +33,7 @@ export default {
                 let levels = []
                 for(let i = 0; i < skill.levels.length; i++) {
                     levels.push({
-                        name: skill.levels[i],
+                        description: skill.levels[i],
                         value: i+1
                     })
                 }
